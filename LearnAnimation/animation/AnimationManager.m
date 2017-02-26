@@ -47,6 +47,7 @@
     [self showLuxuryAnimation];
 }
 
+
 - (void) showLuxuryAnimation
 {
     if (_isShowAnimation) {
