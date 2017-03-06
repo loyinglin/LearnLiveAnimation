@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     [AnimationManager instance].livingView = self.view;
 }
 
@@ -28,7 +29,9 @@
 }
 
 - (IBAction)onKeyFrameAnimation:(id)sender {
-    [[AnimationManager instance] addAnimationWithID:arc4random_uniform(3)];
+//    [[AnimationManager instance] addAnimationWithID:arc4random_uniform(GIFT_COUNT)];
+    static int index = 0;
+    [[AnimationManager instance] addAnimationWithID:index++ % GIFT_COUNT];
 }
 
 

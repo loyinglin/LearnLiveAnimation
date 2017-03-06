@@ -8,42 +8,33 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-// 烟花
-// 轮船
-// 飞机
+
+
+
 typedef NS_ENUM(NSUInteger, GIFT_TYPE) {
-    FIREWORKS_GIFT = 1,
-    SHIP_GIFT = 2,
-    AIRPLANE_GIFT = 3,
+    GIFT_FIREWORKS = 0, // 烟花
+    GIFT_BOAT = 1, // 轮船
+    GIFT_COUNT,
 };
 
 
-#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
-#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
 
 
 @interface AnimationManager : NSObject
 
-
 /**
- 当前是否在播放端动画
+ 直播间内视图
  */
-@property (nonatomic, assign)BOOL            isShowAnimation;
-
-/**
- 待播放的礼物动画
- */
-@property (nonatomic, strong)NSMutableArray<NSDictionary *>  *luxuryArray;
-
 @property (nonatomic, strong)UIView          *livingView;
+
 
 + (instancetype)instance;
 
 
 /**
- 启用动画显示
+ 动画回调
  */
-- (void)showLuxuryAnimation;
+- (void)OnAnimationComplete;
 
 
 /**

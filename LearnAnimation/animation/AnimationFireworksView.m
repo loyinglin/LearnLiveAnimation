@@ -158,7 +158,7 @@ static NSCache *gImageCache;
     self.mNickLabel = nameLabel;
     nameLabel.text = mNickName;
     nameLabel.textColor = [UIColor whiteColor];
-    nameLabel.shadowColor = [UIColor redColor];
+    nameLabel.shadowColor = [UIColor yellowColor];
     [nameLabel sizeToFit];
     nameLabel.center = CGPointMake(self.frame.size.width / 2, -65);
     [self addSubview:nameLabel];
@@ -219,9 +219,12 @@ static NSCache *gImageCache;
         
         // 结束
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((const_explosion_time + const_heart_time) * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self removeFromSuperview];
-            [AnimationManager instance].isShowAnimation = NO;
-            [[AnimationManager instance] showLuxuryAnimation];
+            [UIView animateWithDuration:1.0 animations:^{
+                self.alpha = 0;
+            } completion:^(BOOL finished) {
+                [self removeFromSuperview];
+                [[AnimationManager instance] OnAnimationComplete];
+            }];
         });
         
         return ;

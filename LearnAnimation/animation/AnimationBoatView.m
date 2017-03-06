@@ -36,11 +36,9 @@ static UIImage* gBoatFrameImage;
 static UIImage* gShadowFrameImage;
 static NSArray<UIImage *>* gHeartFramesArray;              //心形帧图片
 
-
-
 #define const_position_boat_x 1538
-#define const_position_boat_width 622
 #define const_shadow_height_rate 1.0
+#define const_boat_width 622
 #define const_boat_height 380
 #define const_wave_height 200
 #define const_boat_position_y_offset 220
@@ -65,12 +63,12 @@ static NSArray<UIImage *>* gHeartFramesArray;              //心形帧图片
     CGImageRelease(cgimage);
     
     cgimage = CGImageCreateWithImageInRect(sourceImage.CGImage,
-                                           CGRectMake(const_position_boat_x, 0, const_position_boat_width, sourceSize.height));
+                                           CGRectMake(const_position_boat_x, 0, const_boat_width, const_boat_height));
     gBoatFrameImage = [UIImage imageWithCGImage:cgimage];
     CGImageRelease(cgimage);
     
     cgimage = CGImageCreateWithImageInRect(sourceImage.CGImage,
-                                           CGRectMake(const_position_boat_x + const_position_boat_width, 0, sourceSize.width - const_position_boat_x - const_position_boat_width, sourceSize.height));
+                                           CGRectMake(const_position_boat_x + const_boat_width, 0, sourceSize.width - const_position_boat_x - const_boat_width, sourceSize.height));
     gShadowFrameImage = [UIImage imageWithCGImage:cgimage];
     CGImageRelease(cgimage);
     
@@ -88,8 +86,6 @@ static NSArray<UIImage *>* gHeartFramesArray;              //心形帧图片
         }
     }
     gHeartFramesArray = imagesArr;
-    
-    gBoatFrameImage = [UIImage imageNamed:@"gift_another_boat"];
 }
 
 - (void)dealloc {
@@ -144,6 +140,7 @@ static NSArray<UIImage *>* gHeartFramesArray;              //心形帧图片
         [self.mBoatImageView removeFromSuperview];
     }
     self.mBoatImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.mBoatView.bounds), CGRectGetHeight(self.mBoatView.bounds))];
+    self.mBoatImageView.transform = CGAffineTransformMakeRotation(-M_PI / 18);
     [self.mBoatView addSubview:self.mBoatImageView];
     
     if (self.mShadowImageView) {
@@ -163,23 +160,27 @@ static NSArray<UIImage *>* gHeartFramesArray;              //心形帧图片
     UILabel* nameLabel = [[UILabel alloc] init];
     nameLabel.text = mNickName;
     nameLabel.textColor = [UIColor whiteColor];
-    nameLabel.shadowColor = [UIColor redColor];
+    nameLabel.shadowColor = [UIColor yellowColor];
     nameLabel.frame = CGRectMake(50, -30, 0, 0);
     [nameLabel sizeToFit];
     [self.mBoatView addSubview:nameLabel];
 }
 
 - (float)mBoatWidth {
-    return const_position_boat_width / 3;
+    return const_boat_width / 3;
 }
 
 - (float)mBoatHeight {
-    return const_boat_height / 3;//[UIScreen mainScreen].scale;
+    return const_boat_height / 3;
 }
 
 
 - (void)startAnimation {
+    self.alpha = 0;
     [self play];
+    [UIView animateWithDuration:1.0 animations:^{
+        self.alpha = 1;
+    }];
 }
 
 - (void)play {
@@ -240,19 +241,22 @@ static NSArray<UIImage *>* gHeartFramesArray;              //心形帧图片
             
             [UIView animateWithDuration:4.0 delay:const_heart_time options:UIViewAnimationOptionCurveEaseIn animations:^{
                 // 停顿三秒后向右边
-                 
                 self.mBoatView.center = CGPointMake(CGRectGetWidth(self.bounds) + self.mBoatWidth, defaultHeight);
             } completion:^(BOOL finished) {
-                 
-                [self removeFromSuperview];
-                [AnimationManager instance].isShowAnimation = NO;
-                [[AnimationManager instance] showLuxuryAnimation];
+                [self endAnimation];
             }];
             
         }];
-
     }];
-    
+}
+
+- (void)endAnimation {
+    [UIView animateWithDuration:1.0 animations:^{
+        self.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
+        [[AnimationManager instance] OnAnimationComplete];
+    }];
 }
 
 

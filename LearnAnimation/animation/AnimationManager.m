@@ -9,9 +9,19 @@
 #import "AnimationManager.h"
 #import "AnimationBoatView.h"
 #import "AnimationFireworksView.h"
-#import "AirplaneAnimationView.h"
+
 
 @interface AnimationManager ()
+
+/**
+ 待播放的礼物动画
+ */
+@property (nonatomic, strong)NSMutableArray<NSDictionary *>  *luxuryArray;
+
+/**
+ 当前是否在播放端动画
+ */
+@property (nonatomic, assign)BOOL            isShowAnimation;
 
 @end
 
@@ -32,6 +42,7 @@
 
 - (void)addAnimationWithID:(int)gift_id {
     NSDictionary *dict = @{@"gift_id":@(gift_id), @"nickname":@"木头"};
+    NSLog(@"add a gift with id %d", gift_id);
     [self addLuxuryDict:dict];
 }
 
@@ -44,13 +55,18 @@
         _luxuryArray = [NSMutableArray array];
     }
     [_luxuryArray addObject:luxuryDict];
-    [self showLuxuryAnimation];
+    [self showAnimation];
 }
 
+- (void)OnAnimationComplete {
+    NSLog(@"gift animation call back");
+    self.isShowAnimation = NO;
+    [self showAnimation];
+}
 
-- (void) showLuxuryAnimation
+- (void) showAnimation
 {
-    if (_isShowAnimation) {
+    if (self.isShowAnimation) {
         return;
     }
     if ([AnimationManager instance].luxuryArray && [AnimationManager instance].luxuryArray.count > 0) {
@@ -58,19 +74,13 @@
         
         NSDictionary *luxuryDict = [[AnimationManager instance].luxuryArray objectAtIndex:0];
         [[AnimationManager instance].luxuryArray removeObjectAtIndex:0];
-        if ([luxuryDict[@"gift_id"] intValue] == FIREWORKS_GIFT) {
+        if ([luxuryDict[@"gift_id"] intValue] == GIFT_FIREWORKS) {
             if (_livingView) {
                 AnimationFireworksView* fireworksView = [[AnimationFireworksView alloc] initWithFrame:CGRectMake(ScreenWidth / 2 - const_fireworks_height / 2, ScreenHeight * (1 - 1.0 / 5) - const_fireworks_height , const_fireworks_height, const_fireworks_height)];
                 fireworksView.mNickName = luxuryDict[@"nickname"];
                 [_livingView addSubview:fireworksView];
             }
-        } else if([luxuryDict[@"gift_id"] intValue] == AIRPLANE_GIFT) {
-            if (_livingView) {
-                AirplaneAnimationView* planeView = [[AirplaneAnimationView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
-                planeView.mNickName = luxuryDict[@"nickname"];
-                [_livingView addSubview:planeView];
-            }
-        } else if ([luxuryDict[@"gift_id"] intValue] == SHIP_GIFT){
+        } else if ([luxuryDict[@"gift_id"] intValue] == GIFT_BOAT){
             if (_livingView) {
                 AnimationBoatView* boatView = [[AnimationBoatView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
                 boatView.userInteractionEnabled = NO;

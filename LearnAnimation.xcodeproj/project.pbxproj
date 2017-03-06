@@ -7,20 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD2DBAC91E4741100078C36F /* AirplaneAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2DBAC51E4741100078C36F /* AirplaneAnimationView.m */; };
-		FD2DBACA1E4741100078C36F /* AirplaneAnimationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD2DBAC61E4741100078C36F /* AirplaneAnimationView.xib */; };
 		FD2DBACB1E4741100078C36F /* AnimationHeartView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2DBAC81E4741100078C36F /* AnimationHeartView.m */; };
 		FD2DBAE71E47411C0078C36F /* gift_boat.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2DBAE01E47411C0078C36F /* gift_boat.png */; };
 		FD2DBAE81E47411C0078C36F /* gift_fireworks_1.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2DBAE11E47411C0078C36F /* gift_fireworks_1.png */; };
 		FD2DBAE91E47411C0078C36F /* gift_fireworks_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2DBAE21E47411C0078C36F /* gift_fireworks_2.png */; };
 		FD2DBAEA1E47411C0078C36F /* gift_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2DBAE31E47411C0078C36F /* gift_heart.png */; };
-		FD2DBAEB1E47411C0078C36F /* gift_missile.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2DBAE41E47411C0078C36F /* gift_missile.png */; };
-		FD2DBAEC1E47411C0078C36F /* gift_missile_fire.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2DBAE51E47411C0078C36F /* gift_missile_fire.png */; };
-		FD2DBAED1E47411C0078C36F /* gift_plane.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2DBAE61E47411C0078C36F /* gift_plane.png */; };
 		FD4831F31CDC83B1009F66D7 /* AnimationBoatView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4831ED1CDC83B1009F66D7 /* AnimationBoatView.m */; };
 		FD4831F41CDC83B1009F66D7 /* AnimationFireworksView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4831EF1CDC83B1009F66D7 /* AnimationFireworksView.m */; };
 		FD4831F51CDC83B1009F66D7 /* AnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4831F11CDC83B1009F66D7 /* AnimationManager.m */; };
-		FDEB08861E47462D0062D280 /* gift_another_boat.png in Resources */ = {isa = PBXBuildFile; fileRef = FDEB08851E47462D0062D280 /* gift_another_boat.png */; };
 		FDF5DCFA1CD9A585000B43B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF5DCF91CD9A585000B43B8 /* main.m */; };
 		FDF5DCFD1CD9A585000B43B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF5DCFC1CD9A585000B43B8 /* AppDelegate.m */; };
 		FDF5DD001CD9A585000B43B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF5DCFF1CD9A585000B43B8 /* ViewController.m */; };
@@ -42,25 +36,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FD2DBAC41E4741100078C36F /* AirplaneAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirplaneAnimationView.h; sourceTree = "<group>"; };
-		FD2DBAC51E4741100078C36F /* AirplaneAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirplaneAnimationView.m; sourceTree = "<group>"; };
-		FD2DBAC61E4741100078C36F /* AirplaneAnimationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AirplaneAnimationView.xib; sourceTree = "<group>"; };
 		FD2DBAC71E4741100078C36F /* AnimationHeartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationHeartView.h; sourceTree = "<group>"; };
 		FD2DBAC81E4741100078C36F /* AnimationHeartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationHeartView.m; sourceTree = "<group>"; };
 		FD2DBAE01E47411C0078C36F /* gift_boat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_boat.png; sourceTree = "<group>"; };
 		FD2DBAE11E47411C0078C36F /* gift_fireworks_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_fireworks_1.png; sourceTree = "<group>"; };
 		FD2DBAE21E47411C0078C36F /* gift_fireworks_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_fireworks_2.png; sourceTree = "<group>"; };
 		FD2DBAE31E47411C0078C36F /* gift_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_heart.png; sourceTree = "<group>"; };
-		FD2DBAE41E47411C0078C36F /* gift_missile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_missile.png; sourceTree = "<group>"; };
-		FD2DBAE51E47411C0078C36F /* gift_missile_fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_missile_fire.png; sourceTree = "<group>"; };
-		FD2DBAE61E47411C0078C36F /* gift_plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_plane.png; sourceTree = "<group>"; };
 		FD4831EC1CDC83B1009F66D7 /* AnimationBoatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationBoatView.h; sourceTree = "<group>"; };
 		FD4831ED1CDC83B1009F66D7 /* AnimationBoatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationBoatView.m; sourceTree = "<group>"; };
 		FD4831EE1CDC83B1009F66D7 /* AnimationFireworksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationFireworksView.h; sourceTree = "<group>"; };
 		FD4831EF1CDC83B1009F66D7 /* AnimationFireworksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationFireworksView.m; sourceTree = "<group>"; };
 		FD4831F01CDC83B1009F66D7 /* AnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationManager.h; sourceTree = "<group>"; };
 		FD4831F11CDC83B1009F66D7 /* AnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationManager.m; sourceTree = "<group>"; };
-		FDEB08851E47462D0062D280 /* gift_another_boat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_another_boat.png; sourceTree = "<group>"; };
+		FD70198D1E66ED9B0043DCE9 /* prehead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prehead.h; sourceTree = "<group>"; };
 		FDF5DCF51CD9A585000B43B8 /* LearnAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF5DCF91CD9A585000B43B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FDF5DCFB1CD9A585000B43B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,14 +87,10 @@
 		FD2DBADF1E47411C0078C36F /* res */ = {
 			isa = PBXGroup;
 			children = (
-				FDEB08851E47462D0062D280 /* gift_another_boat.png */,
 				FD2DBAE01E47411C0078C36F /* gift_boat.png */,
 				FD2DBAE11E47411C0078C36F /* gift_fireworks_1.png */,
 				FD2DBAE21E47411C0078C36F /* gift_fireworks_2.png */,
 				FD2DBAE31E47411C0078C36F /* gift_heart.png */,
-				FD2DBAE41E47411C0078C36F /* gift_missile.png */,
-				FD2DBAE51E47411C0078C36F /* gift_missile_fire.png */,
-				FD2DBAE61E47411C0078C36F /* gift_plane.png */,
 			);
 			path = res;
 			sourceTree = "<group>";
@@ -114,9 +98,6 @@
 		FD4831EB1CDC83B1009F66D7 /* animation */ = {
 			isa = PBXGroup;
 			children = (
-				FD2DBAC41E4741100078C36F /* AirplaneAnimationView.h */,
-				FD2DBAC51E4741100078C36F /* AirplaneAnimationView.m */,
-				FD2DBAC61E4741100078C36F /* AirplaneAnimationView.xib */,
 				FD2DBAC71E4741100078C36F /* AnimationHeartView.h */,
 				FD2DBAC81E4741100078C36F /* AnimationHeartView.m */,
 				FD4831EC1CDC83B1009F66D7 /* AnimationBoatView.h */,
@@ -170,6 +151,7 @@
 		FDF5DCF81CD9A585000B43B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FD70198D1E66ED9B0043DCE9 /* prehead.h */,
 				FDF5DCF91CD9A585000B43B8 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -228,11 +210,12 @@
 		FDF5DCED1CD9A585000B43B8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "林伟池";
 				TargetAttributes = {
 					FDF5DCF41CD9A585000B43B8 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = A478ENRUX2;
 					};
 					FDF5DD0D1CD9A586000B43B8 = {
 						CreatedOnToolsVersion = 7.3;
@@ -265,17 +248,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD2DBAE81E47411C0078C36F /* gift_fireworks_1.png in Resources */,
-				FD2DBAED1E47411C0078C36F /* gift_plane.png in Resources */,
 				FDF5DD081CD9A586000B43B8 /* LaunchScreen.storyboard in Resources */,
 				FD2DBAE71E47411C0078C36F /* gift_boat.png in Resources */,
-				FD2DBACA1E4741100078C36F /* AirplaneAnimationView.xib in Resources */,
-				FD2DBAEC1E47411C0078C36F /* gift_missile_fire.png in Resources */,
 				FD2DBAE91E47411C0078C36F /* gift_fireworks_2.png in Resources */,
-				FDEB08861E47462D0062D280 /* gift_another_boat.png in Resources */,
 				FDF5DD051CD9A586000B43B8 /* Assets.xcassets in Resources */,
 				FD2DBAEA1E47411C0078C36F /* gift_heart.png in Resources */,
 				FDF5DD031CD9A585000B43B8 /* Main.storyboard in Resources */,
-				FD2DBAEB1E47411C0078C36F /* gift_missile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD4831F41CDC83B1009F66D7 /* AnimationFireworksView.m in Sources */,
-				FD2DBAC91E4741100078C36F /* AirplaneAnimationView.m in Sources */,
 				FDF5DD001CD9A585000B43B8 /* ViewController.m in Sources */,
 				FDF5DCFD1CD9A585000B43B8 /* AppDelegate.m in Sources */,
 				FDF5DD271CD9CAA9000B43B8 /* LYGLKViewController.m in Sources */,
@@ -357,8 +334,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -401,8 +380,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -429,6 +410,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A478ENRUX2;
+				GCC_PREFIX_HEADER = LearnAnimation/prehead.h;
 				INFOPLIST_FILE = LearnAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -442,6 +425,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A478ENRUX2;
+				GCC_PREFIX_HEADER = LearnAnimation/prehead.h;
 				INFOPLIST_FILE = LearnAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
