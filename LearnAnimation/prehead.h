@@ -2,8 +2,8 @@
 //  prehead.h
 //  LearnAnimation
 //
-//  Created by 林伟池 on 2017/3/1.
-//  Copyright © 2017年 林伟池. All rights reserved.
+//  Created by 木头 on 2017/3/1.
+//  Copyright © 2017年 木头. All rights reserved.
 //
 
 #ifndef prehead_h
